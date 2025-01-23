@@ -10,7 +10,7 @@ interface Props {
   setFiltro: React.Dispatch<React.SetStateAction<number | null>>;
 }
 
-export default function Filtros({ filtro, setFiltro }: Props) {
+const Filtros = ({ filtro, setFiltro }: Props) => {
   function selecionarFiltro(opcao: IOpcao) {
     if (filtro === opcao.id) return setFiltro(null);
     return setFiltro(opcao.id);
@@ -31,4 +31,6 @@ export default function Filtros({ filtro, setFiltro }: Props) {
       ))}
     </div>
   );
-}
+};
+
+export default Filtros;

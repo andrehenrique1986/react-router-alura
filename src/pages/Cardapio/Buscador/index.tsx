@@ -7,7 +7,7 @@ interface Props {
   setBusca: React.Dispatch<React.SetStateAction<string>>;
 }
 
-export default function Buscador({ busca, setBusca }: Props) {
+const Buscador = ({ busca, setBusca }: Props) => {
   return (
     <div className={styles.buscador}>
       <input
@@ -18,4 +18,6 @@ export default function Buscador({ busca, setBusca }: Props) {
       <CgSearch size={20} color="#4C4D5E" />
     </div>
   );
-}
+};
+
+export default Buscador;
